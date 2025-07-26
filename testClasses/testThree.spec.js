@@ -95,6 +95,7 @@ test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
     await checkOutPage.cancelClick();
     await checkOutPage.checkOutItems(firstName, lastName, zipCode);
     await checkOutPage.continueButtonClick();
+    await console.log("test case is pass")
   });
 
   test.afterEach("Log out from application", async ({ page }) => {
