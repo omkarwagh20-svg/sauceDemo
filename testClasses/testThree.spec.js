@@ -103,7 +103,6 @@ test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
   });
 
   test.afterAll(() => {
-    // ✅ Clean up all object references
     cartPage = null;
     cartItem = null;
     checkOutPage = null;
