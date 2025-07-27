@@ -96,6 +96,7 @@ test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
     await checkOutPage.checkOutItems(firstName, lastName, zipCode);
     await checkOutPage.continueButtonClick();
     console.log("omkarr getting job in pune soon")
+    console.log("omkar wagh is getting job in pune soon")
   });
 
   test.afterEach("Log out from application", async ({ page }) => {
