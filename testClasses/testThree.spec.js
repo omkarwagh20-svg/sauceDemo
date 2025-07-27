@@ -105,6 +105,7 @@ test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
   });
 
   test.afterAll(() => {
+    console.log("omkar wagh getting job in pune soon")
     cartPage = null;
     cartItem = null;
     checkOutPage = null;
