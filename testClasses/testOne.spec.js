@@ -4,7 +4,7 @@ const CartPage = require('../pomClasses/cartPage');
 const LogoutPage = require('../pomClasses/logoutPage');
 let cartPage;
 
-test.describe("Run the test cases parallely", () => {
+test.describe.parallel("Run the test cases parallely", () => {
   test.beforeEach("LoginPage", async ({ page }) => {
     const loginPage = new LoginPage(page);
     await page.goto('https://www.saucedemo.com/');
