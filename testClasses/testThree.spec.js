@@ -90,7 +90,7 @@ test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
     await page.waitForTimeout(2000);
 
     const error = await checkOutPage.getErrorMessage();
-    await expect(error).toBe("Error: First Name is required");
+    await expect.soft(error).toBe("Error: First Name is required");
 
     await checkOutPage.cancelClick();
     await checkOutPage.checkOutItems(firstName, lastName, zipCode);
