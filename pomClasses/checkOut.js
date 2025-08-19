@@ -21,6 +21,7 @@ class CheckOut {
 
     async cancelButtonClick(){
         await this.cancelButton.click()
+        
     }
 
     async continueButtonClick(){
