@@ -40,7 +40,7 @@ test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
     cartPage = new CartPage(page);
     cartItem = new CartItem(page);
     checkOutPage = new CheckOut(page);
-
+    console.log("test1")
     await cartPage.addItemToCart(productOne, productOnePrice);
     await cartPage.addItemToCart(productTwo, productTwoPrice);
 
