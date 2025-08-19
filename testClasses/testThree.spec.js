@@ -14,7 +14,6 @@ let username, password;
 test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
 
   test.beforeAll(async () => {
-    // ✅ Instantiate utility class & load all test data
     utility = new Utility();
 
     username = await utility.UtilityTestData('Sheet1', 2, 1);
