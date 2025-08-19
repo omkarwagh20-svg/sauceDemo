@@ -24,7 +24,7 @@ test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
 
     productTwo = await utility.UtilityTestData('Sheet1', 4, 1);
     productTwoPrice = await utility.UtilityTestData('Sheet1', 4, 2);
-
+    console.log("omkar wagh getting job in pune soon")
     firstName = await utility.UtilityTestData('Sheet1', 6, 1);
     lastName = await utility.UtilityTestData('Sheet1', 6, 2);
     zipCode = await utility.UtilityTestData('Sheet1', 6, 3).toString(); // Ensure string for fill()
