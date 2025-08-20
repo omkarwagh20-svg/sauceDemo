@@ -4,7 +4,7 @@ const CartPage = require('../pomClasses/cartPage');
 const LoginPage = require('../pomClasses/loginPage');
 const LogoutPage = require('../pomClasses/logoutPage');
 const CheckOut = require('../pomClasses/checkOut');
-const Utility = require('./Utility');
+const Utility = require('../Utility');
 
 let cartPage, cartItem, checkOutPage, utility;
 let productOne, productOnePrice, productTwo, productTwoPrice;
@@ -14,6 +14,7 @@ let username, password;
 test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
 
   test.beforeAll(async () => {
+    // ✅ Instantiate utility class & load all test data
     utility = new Utility();
 
     username = await utility.UtilityTestData('Sheet1', 2, 1);
@@ -21,10 +22,10 @@ test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
 
     productOne = await utility.UtilityTestData('Sheet1', 3, 1);
     productOnePrice = await utility.UtilityTestData('Sheet1', 3, 2);
-    
+
     productTwo = await utility.UtilityTestData('Sheet1', 4, 1);
     productTwoPrice = await utility.UtilityTestData('Sheet1', 4, 2);
-    console.log("omkar wagh getting job in pune soon")
+
     firstName = await utility.UtilityTestData('Sheet1', 6, 1);
     lastName = await utility.UtilityTestData('Sheet1', 6, 2);
     zipCode = await utility.UtilityTestData('Sheet1', 6, 3).toString(); // Ensure string for fill()
@@ -40,7 +41,7 @@ test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
     cartPage = new CartPage(page);
     cartItem = new CartItem(page);
     checkOutPage = new CheckOut(page);
-    console.log("test1")
+
     await cartPage.addItemToCart(productOne, productOnePrice);
     await cartPage.addItemToCart(productTwo, productTwoPrice);
 
@@ -89,7 +90,7 @@ test.describe.parallel("End to End Test Cases Until Checkout item page", () => {
     await page.waitForTimeout(2000);
 
     const error = await checkOutPage.getErrorMessage();
-    await expect(error).toBe("Error: First Name is required");
+    await expect.soft(error).toBe("Error: First Name is required");
 
     await checkOutPage.cancelClick();
     await checkOutPage.checkOutItems(firstName, lastName, zipCode);
