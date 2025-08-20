@@ -3,7 +3,7 @@ const CartPage = require('../pomClasses/cartPage')
 const LoginPage = require('../pomClasses/loginPage')
 const LogoutPage = require('../pomClasses/logoutPage')
 const CartitemPage = require('../pomClasses/cartItem')
-const Utility = require('./Utility')
+const Utility = require('../Utility')
 let cartitem;
 let cartPage;
 let productOne
